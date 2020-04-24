@@ -77,13 +77,33 @@ class RingBuffer:
 
 # ----------------Stretch Goal-------------------
 
+# using an array allows you to preallocate the memory 
+# this means you can return a pointer to a block of memory 
+# instead of traversing nodes in order to create a list
+# to return for the get method
+
+# what disadvantage normally found in arrays is overcome here??> 
+    # not sure
+
 
 class ArrayRingBuffer:
     def __init__(self, capacity):
+        self.storage = [0]*capacity
+        self.pointer = 0
+        self.capacity = capacity
+        self.is_full = False
         pass
 
     def append(self, item):
+        self.storage[self.pointer] = item
+        self.pointer += 1
+        if self.pointer == self.capacity: # this will be reached after setting the index of capacity -1
+            self.pointer = 0
+            self.is_full = True
         pass
 
     def get(self):
-        pass
+        if self.is_full:
+            return self.storage
+        else:
+            return self.storage[:self.pointer] # everything up to the zeros

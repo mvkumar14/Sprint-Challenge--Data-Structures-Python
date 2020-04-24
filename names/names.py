@@ -66,12 +66,27 @@ print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 # print(set(duplicates)-set(duplicates1))
 print (f"runtime: {end_time - start_time} seconds\n\n")
 
-# ---------- Stretch Goal -----------
+# ---------- Stretch Goal 1-----------
+# didn't want to do this. but maybe there is a better way.
+# print('STRETCH 1:')
+#     # sort each of the lists, and then
+#     # do a binary search on the lists.
+
+#     # the sorting time would be proportional to n
+#     # the binary search would be log(n)
+# start_time = time.time()
+# duplicates = []
+# if
+# end_time = time.time()
+
+# print(f"{len(union)} duplicates:\n\n{', '.join(union)}\n\n")
+# print (f"runtime: {end_time - start_time} seconds")
+# ---------- Stretch Goal 2-----------
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
 
-print('STRETCH:')
+print('STRETCH 2:')
 start_time = time.time()
 
 a = set(names_1) 
